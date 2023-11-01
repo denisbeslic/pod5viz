@@ -68,8 +68,10 @@ def plot_single_read(pod5_input, selected_read_id, plot_out="example"):
 
         fig.write_html(f"{plot_out}.html")
 
-        plt.plot(time, signal)
+        plt.figure(figsize=(12,3))
+        plt.plot(time[401:701], signal[401:701])
         plt.savefig(f"{plot_out}.jpg")
+        plt.savefig(f"{plot_out}.svg")
 
 
 def main():
